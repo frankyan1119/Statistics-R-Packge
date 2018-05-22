@@ -1,4 +1,9 @@
-#Question 1, Part A
+# The Circle Problem: A robot fires a pistol at a square wall (2m x 2m). 
+# A circular target is precisely in the center and centered on the #middle of the square. 
+# It has radius 1m. The robot fires each shot independently of the last and is equally likely to hit any point on the #wall. 
+# What is the probability that it hits the circle?
+
+#Code:
 Circle = function(n){ #n is the number of shots fired
 	hits = 0 #shots that hit the circle, initial is 0
 	for (i in 1:n) {
