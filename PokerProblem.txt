@@ -1,4 +1,12 @@
-#Question 1, Part B
+# The Poker Test with Four Cards: 
+# Suppose you have four cards which each take on values 0 to 9 independently and with replacement. 
+# What is the probability of each of the following:
+# 1. X cards are the same (i.e. 1 < X < = 4)
+# 2. All cards are different (i.e. X = 1)
+# 3. 2 pairs of cards that are the same, i.e. WWYY
+
+
+# Code:
 PT4 = function(n){ #n is the number of iterations
 	unique = 0 #X = 1 (e.g. [3,4,6,7])
 	one_pair = 0 #X = 2 (e.g. [3,3,9,7])
