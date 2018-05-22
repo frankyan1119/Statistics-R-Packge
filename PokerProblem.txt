@@ -1,0 +1,25 @@
+#Question 1, Part B
+PT4 = function(n){ #n is the number of iterations
+	unique = 0 #X = 1 (e.g. [3,4,6,7])
+	one_pair = 0 #X = 2 (e.g. [3,3,9,7])
+	one_tri = 0 #X = 3 (e.g. [3,3,3,7])
+	two_pair = 0 #(e.g. [3,3,7,7])
+	for (i in 1:n) {
+		cards = sample(0:9,4,replace=T) #generate 4 cards with replacement
+		result = table(cards)
+		unique = unique + (length(result) == 4) #X = 1,the boolean value is 1 if true, 0 otherwise
+		one_pair = one_pair + (length(result) == 3)
+		one_tri = one_tri + (length(result) == 2 & max(result) == 3)
+		two_pair = two_pair + (length(result) == 2 & max(result) == 2)
+	}
+	prob = cbind(unique,one_pair,one_tri,two_pair) / n #generate the probability table
+	return(prob)
+}
+
+#Example:
+n=5000
+
+PT(n)
+
+#      unique one_pair one_tri two_pair
+# [1,] 0.5202   0.4162   0.031   0.0312
