@@ -27,7 +27,7 @@ PT4 = function(n){ #n is the number of iterations
 #Example:
 n=5000
 
-PT(n)
+PT4(n)
 
 #      unique one_pair one_tri two_pair
 # [1,] 0.5202   0.4162   0.031   0.0312
